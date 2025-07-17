@@ -363,7 +363,7 @@ func (xmlNode *XmlNode) PreviousSibling() Node {
 
 // CountChildren returns the number of child nodes.
 func (xmlNode *XmlNode) CountChildren() int {
-	return int(C.xmlLsCountNode(xmlNode.Ptr))
+	return int(C.xmlChildElementCount(xmlNode.Ptr))
 }
 
 func (xmlNode *XmlNode) FirstChild() Node {
